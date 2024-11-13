@@ -6,4 +6,28 @@ Impressionné par les jeux/alogrithmes qui simulent des comportements dans lesqu
 
 ## Déroulement
 
-### 1) Définition de l'acteur
+### 1) Configuration générale
+Des acteurs "vivrons" dans un certains contexte avec des ressources à disposition et des besoins, le monde avancera à chaque tick
+
+### 2) Définition de l'acteur
+
+```mermaid
+classDiagram
+
+class Acteur{
+    -Vivant : Bool
+    -Santé : int
+    -Besoin : int
+    -Âge : int
+    -santeBase : int
+    -besoinMax : int
+    -esperanceDeVie : int
+    -relation : dictionnaire
+
+    -tick(temps)
+    -vieillir(temps)
+    -Affamer(temps)
+    -seNourir(nourriture)
+
+}
+```
