@@ -7,6 +7,8 @@ public class Main {
        for(int i=0 ; i<nombreActeurs ; i++){
         
        }
+
+       new GUI();
     }
  }
  
