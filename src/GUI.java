@@ -6,7 +6,7 @@ import simulation.*;
 
 public class GUI {
     private JFrame mainFrame = new JFrame();
-    private JPanel mainPanel = new JPanel();
+    private JPanel mainPanel = new GUIPanel();
 
     private int width = 700;
     private int height = 500;
@@ -20,9 +20,13 @@ public class GUI {
         mainFrame.setTitle("Simulation");
         mainFrame.setSize(width, height);
         mainFrame.setVisible(true);
+
+        mainFrame.add(mainPanel);
+        mainFrame.pack();
+
     }
 
-    public void afficheMonde(Monde monde){
+/*     public void afficheMonde(Monde monde){
         ArrayList<Point> positions = monde.getPositions();
         Point current;
         for(int i=0 ; i<monde.getNombreHabitant() ; i++){
@@ -30,9 +34,11 @@ public class GUI {
             dessinerActeur(current.getX(), current.getY());
         }
     }
-
-    public void dessinerActeur(double x, double y){
+ */
+/*     public void dessinerActeur(double x, double y){
         mainPanel.drawRect(x/width, y/height, (double)2, (double)2);
     }
-    
+     */
+
 }
+    
